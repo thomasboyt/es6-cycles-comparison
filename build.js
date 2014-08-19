@@ -14,7 +14,7 @@ var esperantoTranspile = function(filepath) {
   fs.writeFileSync('esperanto-output/' + filepath, transpiled, {encoding: 'utf8'});
 };
 
-['a.js', 'b.js', 'importer.js'].map(esperantoTranspile);
+['a.js', 'b.js', 'importer.js'].forEach(esperantoTranspile);
 
 //
 // Transpiler
@@ -30,9 +30,9 @@ var container = new Container({
   formatter: new CjsFormatter()
 });
 
-var transpilerTranspile = function(moduleName) {
-  container.getModule(moduleName);
-  container.write('transpiler-output/' + moduleName + '.js');
+var transpilerTranspile = function(modules) {
+  modules.forEach(function(moduleName) { container.getModule(moduleName); });
+  container.write('transpiler-output/');
 };
 
-['importer', 'a', 'b'].map(transpilerTranspile);
+transpilerTranspile(['importer.js', 'a.js', 'b.js']);
