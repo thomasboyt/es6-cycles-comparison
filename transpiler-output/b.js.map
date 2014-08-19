@@ -1,0 +1,1 @@
+{"version":3,"file":"b.js","sources":["b.js"],"names":[],"mappings":";;;;;;;;;;;;;iBAIe,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,aAAG,CAAC,CAAC,EAAE,EAAE","sourcesContent":["/* jshint esnext:true */\n\nimport a from './a';\n\nexport default { b: 2, get a() { return a.a; } }\n"]}
