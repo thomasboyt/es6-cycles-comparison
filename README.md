@@ -11,4 +11,5 @@ To run:
 ```
 node esperanto-output/importer.js
 node transpiler-output/importer.js
+node 6to5-output/importer.js
 ```

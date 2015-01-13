@@ -1,13 +1,15 @@
 var fs = require('fs');
-var esperanto = require('esperanto');
 var mkdirp = require('mkdirp').sync;
 
 mkdirp('esperanto-output');
 mkdirp('transpiler-output');
+mkdirp('6to5-output');
 
 //
 // Esperanto
 //
+var esperanto = require('esperanto');
+
 var esperantoTranspile = function(filepath) {
   var src = fs.readFileSync(filepath, {encoding: 'utf8'});
   var transpiled = esperanto.toCjs(src);
@@ -36,3 +38,16 @@ var transpilerTranspile = function(modules) {
 };
 
 transpilerTranspile(['importer.js', 'a.js', 'b.js']);
+
+//
+// 6to5
+//
+
+var to5 = require('6to5');
+
+var to5Transpile = function(filepath) {
+  var code = to5.transformFileSync(filepath, {modules: 'common'}).code;
+  fs.writeFileSync('6to5-output/' + filepath, code, {encoding: 'utf8'});
+};
+
+['a.js', 'b.js', 'importer.js'].forEach(to5Transpile);
