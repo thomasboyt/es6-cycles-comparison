@@ -1,0 +1,1 @@
+{"version":3,"sources":["b.js"],"names":[],"mappings":";;qBAIe,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,aAAG,CAAC,CAAC,EAAE,EAAE","file":"es6-module-transpiler-output/b.js","sourceRoot":"/","sourcesContent":["/* jshint esnext:true */\n\nimport a from './a';\n\nexport default { b: 2, get a() { return a.a; } }\n"]}
