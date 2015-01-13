@@ -1,12 +1,14 @@
-This repo compares cycles support for es6-module-transpiler and esperanto.
+This repository runs a simple test case of module cycles in ES6 through various transpilers.
 
-To build with both transpilers: 
+If a transpiler correctly support cycles, the output code should run without erroring.
+
+To build output:
 
 ```
 node build.js
 ```
 
-To run:
+To run the demos:
 
 ```
 node esperanto-output/importer.js
