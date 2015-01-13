@@ -5,8 +5,8 @@
   "main": "a.js",
   "dependencies": {
     "6to5": "^2.11.4",
-    "es6-module-transpiler": "^0.6.0",
-    "esperanto": "^0.3.10",
+    "es6-module-transpiler": "^0.9.6",
+    "esperanto": "^0.6.3",
     "mkdirp": "^0.5.0"
   },
   "devDependencies": {},

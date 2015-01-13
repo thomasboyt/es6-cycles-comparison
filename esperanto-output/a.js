@@ -1,7 +1,7 @@
-var __imports_0 = require('./b');
+'use strict';
 
 /* jshint esnext:true */
 
-var b = __imports_0.default;
+var b = require('./b');
 
-exports.default = { a: 1, get b() { return b.b; } };
+module.exports = { a: 1, get b() { return b.b; } };

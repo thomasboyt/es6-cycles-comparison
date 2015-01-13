@@ -12,7 +12,7 @@ var esperanto = require('esperanto');
 
 var esperantoTranspile = function(filepath) {
   var src = fs.readFileSync(filepath, {encoding: 'utf8'});
-  var transpiled = esperanto.toCjs(src);
+  var transpiled = esperanto.toCjs(src).code;
   fs.writeFileSync('esperanto-output/' + filepath, transpiled, {encoding: 'utf8'});
 };
 

@@ -1,10 +1,9 @@
-var __imports_0 = require('./a');
-var __imports_1 = require('./b');
+'use strict';
 
 /* jshint esnext:true */
 
-var a = __imports_0.default;
-var b = __imports_1.default;
+var a = require('./a');
+var b = require('./b');
 
 var assert = require('assert');
 

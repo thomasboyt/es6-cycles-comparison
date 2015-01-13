@@ -1,5 +1,4 @@
 "use strict";
-Object.seal(exports);
 var a$$ = require("./a"), b$$ = require("./b");
 
 var assert = require('assert');
